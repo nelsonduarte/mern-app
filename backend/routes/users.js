@@ -3,6 +3,7 @@ const {
   createUser,
   getUsers,
   getUser,
+  deleteUser,
   updateUser,
 } = require("../controllers/userController")
 
@@ -19,9 +20,7 @@ router.get("/:id", getUser)
 router.post("/", createUser)
 
 // Rota para apagar um utilizador
-router.delete("/:id", (req, res) => {
-  res.json({ msg: "Apagar um utilizador" })
-})
+router.delete("/:id", deleteUser)
 
 // Rota para atualizar um utilizador
 router.patch("/:id", updateUser)
