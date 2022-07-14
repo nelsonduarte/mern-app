@@ -1,13 +1,273 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
+
+:root {
+  --primary-color: #404e67;
+  --secondary-color: #f8f9fa;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* LOGIN E REGISTO */
+#index {
+  background-color: var(--secondary-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  width: 30%;
+  height: 500px;
+  margin: 100px auto;
+}
+
+.container .logo-icone {
+  width: 300px;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form {
+  width: 80%;
+}
+
+form input {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  /* border-bottom: 1px solid #000; */
+  /* background: none; */
+  outline: none;
+}
+
+form .btn {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  margin: 20px 0px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container .register {
+  margin-top: 20px;
+}
+
+/* DASHBOARD */
+#dashboard {
+  background-color: var(--secondary-color);
+  display: flex;
+}
+
+aside {
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  background: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+aside img {
+  position: fixed;
+  left: 0;
+  width: 200px;
+  margin: 5px 50px;
+}
+
+aside ul {
+  position: fixed;
+  list-style: none;
+  left: 40px;
+  margin: 100px 0px;
+}
+
+aside ul li {
+  width: 220px;
+  padding: 20px 30px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  margin: 20px 0px;
+  cursor: pointer;
+}
+
+aside ul li i {
+  margin-right: 10px;
+}
+
+aside ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+main {
+  width: calc(100% - 300px);
+  height: 100vh;
+  margin: 10px 10px 10px 300px;
+  background-color: var(--secondary-color);
+}
+
+main .dashboard-header {
+  display: flex;
+  justify-content: center;
+}
+
+main header {
+  position: fixed;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  border-bottom: 1px solid #f4f4f4;
+  background-color: var(--primary-color);
+  color: #fff;
+  margin: 10px 30px;
+  /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); */
+}
+
+main a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+
+}
+
+main ul li {
+  padding: 10px 10px;
+}
+
+main i {
+  margin-right: 5px;
+}
+
+.userList {
+  position: absolute;
+  left: 350px;
+  top: 100px;
+  display: flex;
+  max-width: 1100px;
+  flex-wrap: wrap;
+  color: #000;
+}
+
+.user {
+  padding: 20px;
+  line-height: 1.4em;
+  background: #fff;
+  width: 300px;
+  margin: 10px;
+  border-top: 3px solid var(--primary-color);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+main ul li input {
+  padding: 5px;
+  border: none;
+
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
+main ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+main .cards-group {
+  margin: 100px 50px;
+}
+
+main .cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+main .card,
+main .card-form {
+  width: 20%;
+  padding: 20px 30px;
+  border-bottom: 1px solid var(--secondary-color);
+  background-color: #fff;
+  margin: 15px;
+  text-align: center;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* FORMULARIOS */
+main .cards-forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 150px 50px;
+}
+
+.forms {
+  width: 90%;
+  margin: 150px auto;
+}
+
+.dados-pessoais {
+  width: 100%;
+}
+
+form {
+  width: 100%;
+}
+
+.forms .titulo,
+.forms .titulo-en {
+  text-align: center;
+  margin: 50px;
+}
+
+.dados-form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dados-form label {
+  display: block;
+  font-size: 13px;
+  text-align: center;
+  margin: 20px 0px 10px 0px;
+}
+
+hr {
+  margin: 30px 0px;
+}
+
+.btn-enviar {
+  background: var(--primary-color);
 }
